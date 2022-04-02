@@ -44,6 +44,13 @@ const nest: RoutesTypeNew = [
         meta: {
           title: '二级菜单2',
         },
+      },
+      {
+        path:'nest3',
+        component:() => import(/* webpackChunkName: "nest2" */'@/views/nest/nest3/index'),
+        meta:{
+          title:'二级菜单3'
+        }
       }
     ]
   },

@@ -22,6 +22,7 @@ function http (method: Method, host: string, apiUrl: string, data: any, {
   withCredentials,
 }: any = {}) {
   // 默认值
+  debugger
   method = method || 'get'
   codeList = codeList || []
   baseURL = baseURL || ''

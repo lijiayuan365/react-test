@@ -15,7 +15,6 @@ import { OnRouteBeforeType } from 'react-router-waiter'
 // 导入模块路由
 import test from './test'
 import nest from './nest'
-
 /**
  * @description: 全局路由配置
  * meta字段说明：↓↓↓

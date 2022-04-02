@@ -4,6 +4,6 @@ dist
 build
 *.html
 src/utils/libs
-
+src
 scripts
 config

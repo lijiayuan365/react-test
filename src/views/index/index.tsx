@@ -10,7 +10,10 @@ import { observer, useStore } from '@/hooks/storeHook'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, DatePicker } from 'antd'
+import DogButton from '@/components/ljy/dogButton'
+import ParentCom from '@/components/ljy/parentCom';
 import tools from '@/utils/tools'
+import api from '@/api'
 
 function Index (props: any) {
   const navigate = useNavigate()
@@ -19,11 +22,14 @@ function Index (props: any) {
 
   useEffect(() => {
     console.log('index props', props)
-    initData()
+    // initData()
   }, [])
 
   async function initData () {
     // get index data from api
+    api.getDogList().then(res => {
+      debugger
+    })
   }
 
   function toPage () {
@@ -33,8 +39,10 @@ function Index (props: any) {
 
   return (
     <div className="v-index-index">
+      <ParentCom />
       <div className='wrap'>
         <Button onClick={toPage}>去测试页</Button>
+        <DogButton name='ss'></DogButton>
       </div>
       <div className='wrap'>
         <DatePicker />
@@ -42,6 +50,7 @@ function Index (props: any) {
       <div className='wrap'>
         {userStore.ticket}
       </div>
+
     </div>
   )
 }

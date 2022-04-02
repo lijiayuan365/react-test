@@ -9,7 +9,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 
 const proxyData = {
   '/proxy': {
-    target: 'http://test.api.com/',
+    target: 'http://test.backend.dog-charity.utipsgood.com/api',
     changeOrigin: true,
     secure: false,
   },

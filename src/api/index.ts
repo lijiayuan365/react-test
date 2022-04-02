@@ -5,13 +5,13 @@
  * @LastEditTime: 2021-12-28
  * @LastEditors: Neo
  */
-// import http from '@/utils/request/http'
+import http from '@/utils/request/http'
 
 const api = {
   // 获取用户信息
   // getUserInfo: (data) => http('get', '', '/proxy/getUserInfo', data),
   // 模拟从接口获取用户信息
-  getUserInfo () {
+  getUserInfo() {
     return new Promise((resolve) => {
       setTimeout(() => {
         console.log('got userInfo')
@@ -26,6 +26,9 @@ const api = {
       }, 200)
     })
   },
+  getDogList() {
+    return http('get', '', ' /proxy/dog/list', { pn: 1, ps: 10 },{baseURL:'/proxy/dog/list'})
+  }
 }
 
 export default api

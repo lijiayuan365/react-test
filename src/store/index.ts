@@ -7,8 +7,10 @@
  */
 import User from './modules/user'
 import Common from './modules/common'
+import TestKey from './modules/test'
 
 export default {
   userStore: new User(),
   commonStore: new Common(),
+  testKey: new TestKey(),
 }
